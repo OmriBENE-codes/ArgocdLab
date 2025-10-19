@@ -1,0 +1,20 @@
+replicaCount: 2
+
+image:
+  repository: gcr.io/google-samples/gb-frontend
+  tag: v5
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 80
+
+labels:
+  app: guestbook-ui
+  
+resources: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
